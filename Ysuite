@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="/Users/nikhildonde/anaconda3/pkgs/panel-0.14.3-py310hca03da5_0/lib/python3.10/site-packages/panel/dist/bundled/bootstrap4/css/bootstrap.min.css">
+  <style>
+    body {
+      padding-top: 20px;
+    }
+
+    .modal-header {
+      background-color: #000;
+      color: #fff;
+      text-align: center;
+    }
+
+    .table-striped tbody tr:nth-of-type(odd) {
+      background-color: #f8f9fa;
+    }
+
+    .table-striped tbody tr:nth-of-type(even) {
+      background-color: #dee2e6;
+    }
+
+    .table-striped tbody tr td:nth-child(1),
+    .table-striped tbody tr td:nth-child(2) {
+      color: blue;
+    }
+
+    .search-container {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Black bar with "Customer" written in bold white -->
+<div class="container-fluid bg-dark text-white p-3">
+  <h2 class="font-weight-bold">Customer</h2>
+</div>
+
+<!-- Button to add customer -->
+<div class="container-fluid text-right mb-3">
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#customerModal">Add Customer</button>
+</div>
+
+<!-- Table inside Bootstrap Modal -->
+<div class="modal fade" id="customerModal" tabindex="-1" role="dialog" aria-labelledby="customerModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="customerModalLabel">Customers Table</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <!-- Search and show rows options -->
+        <div class="search-container">
+          <div class="form-group">
+            <label for="rowsPerPage">Show</label>
+            <select class="form-control" id="rowsPerPage">
+              <option>10</option>
+              <option>25</option>
+              <option>50</option>
+              <option>100</option>
+            </select>
+            <label for="rowsPerPage">rows per page</label>
+          </div>
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Search">
+          </div>
+        </div>
+
+        <!-- Customers Table -->
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Customer Name</th>
+              <th>Address</th>
+              <th>Email</th>
+              <th>Mobile</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Add customer rows dynamically -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="/Users/nikhildonde/Downloads/WebApp-master/js/jquery.js"></script>
+<script src="/Users/nikhildonde/Downloads/Starting code - module 2 and 3 assignment/js/bootstrap.min.js"></script>
+
+</body>
+</html>
